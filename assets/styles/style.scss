@@ -1,0 +1,29 @@
+@use "./modules/vars";
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: vars.$background-body;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+header {
+  border: 0.1rem solid black;
+  margin: 5rem;
+  width: 50%;
+  padding: 0.5rem;
+
+  .article {
+    border: vars.$border;
+    width: 90%;
+    margin: 2rem;
+    padding: 2rem;
+  }
+}
