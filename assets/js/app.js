@@ -3,7 +3,10 @@ import {article} from "./Article";
 
 let divList = document.getElementsByClassName("article");
 
-export const requestUrl = "https://newsapi.org/v2/everything?q=Apple&from=2022-11-21&sortBy=popularity&apiKey=962922d72d2149b1b2857257139bf165";
+const requestUrl = 'https://newsapi.org/v2/top-headlines?' +
+    'country=fr&' +
+    'apiKey=962922d72d2149b1b2857257139bf165';
+
 let xhr = new XMLHttpRequest();
 xhr.open("GET", requestUrl);
 xhr.responseType = "json";
@@ -21,7 +24,10 @@ xhr.onload = function () {
             response.articles[i].author = "Inconnu";
         }
         authorArticle.innerHTML = "Auteur : " + response.articles[i].author;
+        let imageArticle = document.createElement("img");
+        imageArticle.src = response.articles[i].urlToImage;
         divList[i].append(titleArticle);
+        divList[i].append(imageArticle);
         divList[i].append(authorArticle);
     }
     console.log(response)
