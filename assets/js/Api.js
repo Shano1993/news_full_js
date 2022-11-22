@@ -41,6 +41,11 @@ export let request = function () {
             // Create a date
             let date = response.articles[i].publishedAt.replace('T', ' ').replace('Z', ' ');
             newElement.element(date, i, "p");
+
+            divList[i].addEventListener("click", function () {
+                let content = response.articles[i].content;
+                newElement.element(content, i, "p");
+            })
         }
     }
 }
