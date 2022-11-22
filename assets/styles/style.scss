@@ -6,41 +6,68 @@
   box-sizing: border-box;
 }
 
-body {
-  background-color: vars.$background-body;
-}
-
 html {
   font-size: 62.5%;
+  font-family: sans-serif;
 }
 
 header {
   margin: 5rem;
-  width: 50%;
+  width: 70%;
   padding: 0.5rem;
 
   .article {
     border: vars.$border;
+    border-radius: 0.5rem;
     display: flex;
     flex-direction: column;
-    width: 95%;
     margin: 2rem;
-    padding: 2rem;
+    padding: 1.5rem;
 
     img {
-      max-width: 20vw;
+      max-width: 15vw;
     }
 
     h2 {
-      font-size: 1.5rem;
+      font-size: 1.8rem;
       padding: 1.5rem 0;
       text-decoration-line: underline;
     }
 
     span {
-      font-size: 1.2rem;
+      font-size: 1.3rem;
       font-weight: bold;
-      padding: 1.5rem 0;
+      color: vars.$color-grey;
+    }
+
+    p {
+      font-size: 1.5rem;
+      padding: 1rem 0;
+      color: vars.$color-grey;
     }
   }
+}
+
+.dark {
+  background-color: #222222;
+  color: rgba(249, 249, 249, 0.98);
+}
+
+.light {
+  background-color: vars.$background-body;
+  color: #222222;
+}
+
+#switch1 {
+  background-color: white;
+}
+
+#switch2 {
+  background-color: black;
+  color: white;
+}
+
+.switch {
+  padding: 0.5rem;
+  border-radius: 0.5rem;
 }
