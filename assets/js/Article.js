@@ -6,9 +6,6 @@ export let article = function () {
         for (let i = 0; i < 20; i++) {
             let divArticle = document.createElement("div");
             divArticle.className = "article";
-            divArticle.addEventListener("click", function () {
-                console.log("Aie" + i)
-            })
             header.append(divArticle);
         }
     }
